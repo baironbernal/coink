@@ -1,0 +1,54 @@
+.content {
+    padding: 20px;
+    h1 {
+        color: #004B40;
+        font-size: 33px;
+    }
+    h1,
+    section,
+    &__filters,
+    &__buttons {
+        padding: 15px 0;
+    }
+    &__filters {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__filter {
+        font-size: 16px;
+        font-style: bold;
+        & input {
+            height: 20px;
+            margin-top: 1em;
+            outline: none;
+            border-color: #7B7B7B;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            background-color: #eee;
+        }
+    }
+    &__filter,
+    &__button-gray,
+    &__button-dark {
+        margin-right: 20px;
+    }
+    &__box-filters {
+        max-width: 500px;
+    }
+    &__buttons {
+        display: flex;
+        & button {
+            border-color: #004B40;
+            height: 32px;
+            width: 145px;
+        }
+    }
+    &__button-gray {
+        color: #004B40;
+    }
+    &__button-dark {
+        background-color: #004B40;
+        color: white;
+    }
+}
