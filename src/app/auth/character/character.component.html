@@ -7,18 +7,17 @@
                 <input 
                     type="text" 
                     #inputSearch
-                    name="searchByName" 
-                    (keyup)="searchByName(inputSearch.value)" 
+                    name="searchByName"  
                     placeholder="Rick">
             </div>
             <div class="content__filter">
                 <label for="searchByDate">Busqueda por fecha:</label>
-                <input type="text" name="searchByDate"  placeholder="23/07/2022">
+                <input #inputDate type="text" name="searchByDate"  placeholder="23/07/2022">
             </div>
         </div>
         <div class="content__buttons">
-            <button class="content__button-gray" title="Limpiar filtros">Limpiar filtros</button>
-            <button class="content__button-dark" title="Buscar">Buscar</button>
+            <button class="content__button-gray" title="Limpiar filtros" (click)="handleClear()">Limpiar filtros</button>
+            <button class="content__button-dark" title="Buscar" (click)="searchByName(inputSearch.value)">Buscar</button>
         </div>
     </section>
     <div class="content__table">
