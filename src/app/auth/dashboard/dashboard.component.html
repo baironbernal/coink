@@ -1,21 +1,11 @@
 <main class="dashboard">
-    <header class="header">
-        <div class="header__logo">
-            <img src="https://coink.com/wp-content/uploads/2021/09/Logo-Coink-Neon.svg" alt="coink">
+    <aside [ngClass]="!isShrink ? 'menu' : 'menu shrink' ">
+        <div class="menu__logo">
+            <img src="/assets/dashboard/images/coink.png" alt="coink" width="145" height="100%">
         </div>
-        <nav class="navbar">
-            <img class="navbar__menu-img" src="/assets/dashboard/images/icon-menu.svg" alt="menu icon">
-            <ul class="navbar__items">
-                <li><a href="#" class="navbar__link">Backoffice</a></li>
-            </ul>
-            <img class="navbar__login" src="/assets/dashboard/images/profile.svg" alt="menu icon">
-        </nav>
-    </header>
-
-    <section class="container">
-        <aside class="menu">
+        <div class="menu__content">
             <div class="menu__photo-user">
-                <img src="https://i.pravatar.cc/75" alt="photo user">
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="photo user" width="120" height="120">
             </div>
             <nav class="menu__navbar">
                 <ul class="menu__navbar-items">
@@ -30,7 +20,19 @@
                     </li>
                 </ul>
             </nav>
-        </aside>
+        </div>
+    </aside>
+    
+    <section class="container">
+        <header class="header">
+            <nav class="navbar">
+                <img src="/assets/dashboard/images/icon-menu.svg" alt="menu icon" (click)="slideMenu()">
+                <ul class="navbar__items">
+                    <li><a href="#" class="navbar__link">Backoffice</a></li>
+                </ul>
+                <img class="navbar__login" src="/assets/dashboard/images/person.svg" alt="menu person">
+            </nav>
+        </header>
         <app-character></app-character>
     </section>
 

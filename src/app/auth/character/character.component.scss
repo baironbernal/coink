@@ -1,7 +1,13 @@
+@import "src/sass/variables";
+
+.dashboard {
+    display: flex;
+}
+
 .content {
     padding: 20px;
     h1 {
-        color: #004B40;
+        color: $green-dark-second;
         font-size: 33px;
     }
     h1,
@@ -19,13 +25,9 @@
         font-style: bold;
         & input {
             height: 20px;
-            margin-top: 1em;
-            outline: none;
-            border-color: #7B7B7B;
-            border-top-style: hidden;
-            border-right-style: hidden;
-            border-left-style: hidden;
-            background-color: #eee;
+            border-style: hidden;
+            border-bottom-style: groove;
+            background-color: transparent;
         }
     }
     &__filter,
@@ -39,16 +41,16 @@
     &__buttons {
         display: flex;
         & button {
-            border-color: #004B40;
+            border-color: $green-dark-second;
             height: 32px;
             width: 145px;
         }
     }
     &__button-gray {
-        color: #004B40;
+        color: $green-dark-second;
     }
     &__button-dark {
-        background-color: #004B40;
+        background-color: $green-dark-second;
         color: white;
     }
 }
@@ -60,4 +62,9 @@ table {
   
   th.mat-sort-header-sorted {
     color: black;
+  }
+
+  th.mat-header-cell {
+    background: $green-dark-second;
+    color: white;
   }

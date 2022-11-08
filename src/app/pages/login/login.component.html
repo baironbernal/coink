@@ -18,19 +18,19 @@
                                     </a>
                               </li>
                               <li>
-                                    <a href="#" class="nav__register-link">Registrate ahora</a>
+                                    <a routerLink="/auth" class="nav__register-link">Registrate ahora</a>
                               </li>
                         </ul>
                   </nav>
                   <div class="login">
                         <h3 class="login__title">Iniciar sesión en Coink</h3>
-                        <span class="login__fields">Correo electrónico</span>
-                        <input type="text" name="" id="">
-                        <span class="login__fields">Contraseña</span>
-                        <input type="password" name="" id="">
+                        <label for="email" class="login__fields">Correo electrónico</label>
+                        <input type="email" name="email" />
+                        <label for="password" class="login__fields">Contraseña</label>
+                        <input type="password" name="password" />
                         <div class="login__remember">
-                              <input class="login__remember-check" type="checkbox"/>
-                              <p class="login__remember-title">Recuerdame</p>
+                              <input class="login__remember-check" type="checkbox" name="check" />
+                              <label for="check" class="login__remember-title">Recuerdame</label>
                         </div>
                         
                         <button class="login__button">

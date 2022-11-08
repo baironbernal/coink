@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  isShrink: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  slideMenu() {
+    this.isShrink = !this.isShrink;
   }
 
 }

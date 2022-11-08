@@ -2,21 +2,45 @@
 @import "src/sass/variables";
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 body {
       background-color: $gray;
+      font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+      line-height: normal;
 }
 
 a {
       text-decoration: none;
-  }
+}
   
-  ul {
+ul {
       list-style: none;
-  }
+}
+button {
+      cursor: pointer;
+}
+
+input[type=text], input[type=email], input[type=password] {
+      margin-top: 0.5em; 
+      padding: 8px;
+      border: 1px solid $gray;
+      border-radius: 10px;
+}
+
+input:focus {
+      outline: none;
+      box-shadow: 0 0 2px $dark-green;
+}
+
+label {
+      color: $gray-dark;
+      font-size: 12px;
+}
 
 .main-container {
       width: 100%;
@@ -31,6 +55,3 @@ a {
             grid-column-gap: 5em;
       }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
